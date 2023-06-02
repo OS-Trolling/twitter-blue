@@ -5,19 +5,11 @@ void kernel_early_main() {
 }
 
 void kernel_main() {
-    printf("Welcome to the multiboot-template!\n");
-    printf("This VGA Text interface supports up to 16 colors!\n");
-
-    printf("Here's an example:\n");
-    for(int i = 0; i < 0xF; i++) {
-        /* If i is 0, change the background color to white, if not make it black */
-        int bg = (i != 0x0) ? 0x0 : 0xF;
-
-        /* Change the color and print */
-        color = vga_entry_color(i, bg);
-        printcf('#');
-    }
-    printf("\n");
+    printf("Shut up, nerd! After all, you paid for fucking\n");
+    printf_color("  _____        _ _   _           \n"
+" |_   _|_ __ _(_) |_| |_ ___ _ _ \n"
+"   | | \\ V  V / |  _|  _/ -_) '_|\n"
+"   |_|  \\_/\\_/|_|\\__|\\__\\___|_|  ", VGA_COLOR_CYAN, VGA_COLOR_BLACK);
 }
 
 void kernel_end() {

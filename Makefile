@@ -10,8 +10,8 @@ SRCDIR=src
 BUILDDIR=obj
 ISODIR=iso
 BOOTDIR=$(ISODIR)/boot
-BINFILE=$(BOOTDIR)/multiboot-template.bin
-ISOFILE=bin/multiboot-template.iso
+BINFILE=$(BOOTDIR)/twitter-blue.bin
+ISOFILE=bin/twitter-blue.iso
 
 SRCS=$(shell find $(SRCDIR) -name '*.c' -o -name '*.asm')
 OBJS=$(patsubst $(SRCDIR)/%.c,$(BUILDDIR)/%.o,$(patsubst $(SRCDIR)/%.asm,$(BUILDDIR)/%.o,$(SRCS)))
